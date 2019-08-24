@@ -1,4 +1,4 @@
-package com.appsnipp.news
+package com.appsnipp.travelnotes
 
 /**
  * Created by kapil on 05/10/18.

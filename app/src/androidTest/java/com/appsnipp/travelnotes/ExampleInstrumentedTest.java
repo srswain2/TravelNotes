@@ -1,4 +1,4 @@
-package com.appsnipp.news;
+package com.appsnipp.travelnotes;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

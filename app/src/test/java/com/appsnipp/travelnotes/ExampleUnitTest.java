@@ -1,4 +1,4 @@
-package com.appsnipp.news;
+package com.appsnipp.travelnotes;
 
 import org.junit.Test;
 

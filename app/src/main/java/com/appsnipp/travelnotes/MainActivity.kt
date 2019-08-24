@@ -1,4 +1,4 @@
-package com.appsnipp.news
+package com.appsnipp.travelnotes
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
