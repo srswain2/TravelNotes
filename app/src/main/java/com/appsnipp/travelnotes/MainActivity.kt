@@ -1,5 +1,6 @@
 package com.appsnipp.travelnotes
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.appsnipp.travelnotes.cardLayoutList.cardLayoutListActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
@@ -17,11 +19,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private var bottomNavigationView: BottomNavigationView? = null
 
-
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
-            R.id.navigationMyProfile -> return@OnNavigationItemSelectedListener true
-            R.id.navigationMyCourses -> return@OnNavigationItemSelectedListener true
+            R.id.navigationMyProfile -> {
+                val intent = Intent(this, Timeline::class.java)
+                startActivity(intent)
+            }
+            R.id.navigationMyCourses -> {
+                val intent = Intent(this, cardLayoutListActivity::class.java)
+                startActivity(intent)
+            }
             R.id.navigationHome -> return@OnNavigationItemSelectedListener true
             R.id.navigationSearch -> return@OnNavigationItemSelectedListener true
             R.id.navigationMenu -> {
