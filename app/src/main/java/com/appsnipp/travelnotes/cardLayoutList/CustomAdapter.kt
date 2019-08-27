@@ -20,14 +20,14 @@ class CustomAdapter(private val dataSet: ArrayList<DataModel>) : RecyclerView.Ad
 
         internal var textViewName: TextView
         internal var textViewVersion: TextView
-        internal var imageViewIcon: ImageButton
-        internal var relativeLayoutCardView: RelativeLayout
+        internal var imageViewIcon: ImageView
+        // internal var relativeLayoutCardView: RelativeLayout
 
         init {
             this.textViewName = itemView.findViewById(R.id.textViewName) as TextView
             this.textViewVersion = itemView.findViewById(R.id.textViewVersion) as TextView
-            this.imageViewIcon = itemView.findViewById(R.id.imageView) as ImageButton
-            this.relativeLayoutCardView = itemView.findViewById(R.id.relativeLayoutCardView) as RelativeLayout
+            this.imageViewIcon = itemView.findViewById(R.id.imageView) as ImageView
+            // this.relativeLayoutCardView = itemView.findViewById(R.id.relativeLayoutCardView) as RelativeLayout
         }
     }
 
@@ -45,15 +45,15 @@ class CustomAdapter(private val dataSet: ArrayList<DataModel>) : RecyclerView.Ad
 
         val textViewName = holder.textViewName
         val textViewVersion = holder.textViewVersion
-        // val imageView = holder.imageViewIcon
-        val relativeLayoutCardViewBackground = holder.relativeLayoutCardView
+        val imageView = holder.imageViewIcon
+        // val relativeLayoutCardViewBackground = holder.relativeLayoutCardView
 
         textViewName.text = dataSet[listPosition].name
         textViewName.bringToFront()
         textViewVersion.text = dataSet[listPosition].version
         textViewVersion.bringToFront()
-        // imageView.setImageResource(dataSet[listPosition].image)
-        relativeLayoutCardViewBackground.setBackgroundResource(dataSet[listPosition].image)
+        imageView.setImageResource(dataSet[listPosition].image)
+        // relativeLayoutCardViewBackground.setBackgroundResource(dataSet[listPosition].image)
     }
 
     override fun getItemCount(): Int {
